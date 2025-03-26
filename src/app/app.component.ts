@@ -7,16 +7,17 @@ import { Profilecomponent } from './Profile/profile.component';
 
 import { CounterComponent } from './counter/counter.component';
 import { log } from 'console';
+import { EventAngularComponent } from './event-angular/event-angular.component';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, FormsModule, BindingComponent, RouterOutlet, Profilecomponent, CounterComponent],
+  imports: [CommonModule, FormsModule, BindingComponent, RouterOutlet, Profilecomponent, CounterComponent, EventAngularComponent],
   //  
   // template: `
   // <h1>Angular 4 App</h1>
   // `
-  templateUrl: './app.component.html'
-  // styleUrl: './app.component.css'
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
   // title = 'my-angular-app';
