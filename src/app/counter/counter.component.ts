@@ -22,5 +22,5 @@ export class CounterComponent {
     else{
       this.count=0
     }
-  }
+  }//best way to use function
 }
