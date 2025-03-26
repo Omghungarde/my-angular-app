@@ -1,0 +1,38 @@
+ng serve ==> to run the server
+ng generate component componentName ==> to generate new component
+In component there are css, html, spec.ts, ts files are present
+Interpolation ==> provides the data binding from component to view and is one way data binding  It binds from Component class to the template
+<h1>{{ pageTitle }}</h1> ==> for interpolation we use double curly braces
+Property binding allows us to bind Property of view element to the value of template expression
+For Property Binding syntax should be in square bracket <img [src]="imageUrl"/>
+difference between interpolation and property binding ==>If I talk about Interpolation – it requires expression to return a string. So if you want to set element property to a non string data value - we must use property binding
+
+in above two property we create example of button interpolation btn not work because Interpolation ({{}}) is only for displaying values, not for controlling behavior.
+Property Binding ([property]="value") controls the behavior of an element.
+Boolean values (true or false) affect attributes like [disabled], but not text content directly.
+
+Interpolation does NOT disable buttons; [disabled] does.
+
+Directives are one of the important and cool feature of  Angular application and its play a important role in angular projects.
+
+The first queestion that will come to our mind is that what exactly a directive is ? and what it can do for us in angular. So Directives are extra markup on your DOM . So if you find some same logic need to be use across the components so you have 2 approach for the same.
+
+1) You can write that logic individually in each component but it is not feasible everywhere and it increase your line of code and make your project more complex so we will go with second approach and that is directive
+
+2) we will write that behavior inside our directive and wherever we need it we will just import that directive
+In  Angular there are 3 types of directives and those are
+1) Component
+2)Attribute
+3)Structurual
+
+
+Component: In our previous lessons we have already discussed about Component. If TS class has a decorator with the name @Component it means we area creating our component decorator and then we can use this component in html template by specify by its selector name.
+
+Attribute Directive : It is mainly used to change/modify the behavior of the html element.
+As the name tells, it is used to change the attributes of the existing html element. In Angular there are many built in attribute directives. Some of the useful ones are NgClass, NgStyle
+
+Structural Directive:
+Structural directives are responsible for HTML layout. They shape or reshape the DOM's structure, typically by adding, removing, or manipulating elements.
+To say in simple words, unlike Attribute Directive which we see above, Structural directive is used to add or remove the Dom Element itself in the Dom Layout, whereas attribute directives are used to just change the attribute or appearance of the Dom element.
+Structural directives are easy to recognize by using an asterisk (*)
+Built-in structural directive - NgIf, NgFor, and NgSwitc

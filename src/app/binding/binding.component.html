@@ -1,0 +1,24 @@
+<p>binding works!</p>
+
+<h1>Interpolation Binding</h1>
+<h2>{{ pageTitle }}</h2>
+
+<img src={{imageUrl}}/>
+
+<button disabled={{btnStatus}}>Click</button>
+<h1>Proerty Binding</h1>
+
+<img [src]="imageUrl"/>
+
+<button [disabled]="btnStatus">Click</button>
+
+
+<h1>Event Binding</h1>
+<h3>{{ change }}</h3>
+<button (click)="changeTitle()">Change Title</button>
+
+<h1>Two Way Binding</h1>
+
+<input type="text" [(ngModel)] = "username"/>
+
+<h4>Welcome {{username}}</h4>
