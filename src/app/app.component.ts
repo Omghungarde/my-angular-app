@@ -5,13 +5,16 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule
 import { CommonModule } from '@angular/common'; // Import FormsModule
 import { Profilecomponent } from './Profile/profile.component';
 
+import { CounterComponent } from './counter/counter.component';
+import { log } from 'console';
+
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, FormsModule, BindingComponent, RouterOutlet, Profilecomponent],
+  imports: [CommonModule, FormsModule, BindingComponent, RouterOutlet, Profilecomponent, CounterComponent],
   //  
   // template: `
   // <h1>Angular 4 App</h1>
-  // `A
+  // `
   templateUrl: './app.component.html'
   // styleUrl: './app.component.css'
 })
@@ -20,4 +23,17 @@ export class AppComponent {
   // imageUrl:string = "assets/image1.jpg";
   title:string="AngualrApp";
   users = ["John","Sam","Michel"];
+
+  handleclickEvent(){
+    alert('Work');
+    this.handleclickConsole();//in function calling another function 
+    
+  }
+  handleclickConsole(){
+    console.log("Work Succefully");
+    
+  }
+  
 }
+
+
