@@ -16,9 +16,10 @@ import { SignalsAllComponent } from './signals-all/signals-all.component';
 import { LoopcontextualComponent } from "./loopcontextual/loopcontextual.component";
 import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { DynamicStyleComponent } from "./dynamic-style/dynamic-style.component";
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, FormsModule, BindingComponent, RouterOutlet, Profilecomponent, CounterComponent, EventAngularComponent, GetsetComponent, IfElseComponent, PracticeMeComponent, LoopsComponent, SignalsAllComponent, LoopcontextualComponent,TwowaybindingComponent,TodoListComponent],
+  imports: [CommonModule, FormsModule, BindingComponent, RouterOutlet, Profilecomponent, CounterComponent, EventAngularComponent, GetsetComponent, IfElseComponent, PracticeMeComponent, LoopsComponent, SignalsAllComponent, LoopcontextualComponent, TwowaybindingComponent, TodoListComponent, DynamicStyleComponent],
   //  
   // template: `
   // <h1>Angular 4 App</h1>
