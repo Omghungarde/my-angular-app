@@ -8,10 +8,11 @@ import { Profilecomponent } from './Profile/profile.component';
 import { CounterComponent } from './counter/counter.component';
 import { log } from 'console';
 import { EventAngularComponent } from './event-angular/event-angular.component';
+import { GetsetComponent } from './getset/getset.component';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, FormsModule, BindingComponent, RouterOutlet, Profilecomponent, CounterComponent, EventAngularComponent],
+  imports: [CommonModule, FormsModule, BindingComponent, RouterOutlet, Profilecomponent, CounterComponent, EventAngularComponent, GetsetComponent],
   //  
   // template: `
   // <h1>Angular 4 App</h1>

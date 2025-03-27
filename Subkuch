@@ -36,3 +36,138 @@ Structural directives are responsible for HTML layout. They shape or reshape the
 To say in simple words, unlike Attribute Directive which we see above, Structural directive is used to add or remove the Dom Element itself in the Dom Layout, whereas attribute directives are used to just change the attribute or appearance of the Dom element.
 Structural directives are easy to recognize by using an asterisk (*)
 Built-in structural directive - NgIf, NgFor, and NgSwitc
+
+<!-- STYLES -->
+
+**Angular CSS Loading Order & Hierarchy**
+
+---
+
+### **🔥 CSS Priority Order (Highest to Lowest)**
+
+1️⃣ **Inline Styles (Highest Priority)**  
+   - Defined directly inside HTML using `style="..."`.
+   - Example:  
+     ```html
+     <h1 style="color: yellow;">Hello</h1>
+     ```
+   ✅ **Overrides all other styles**.
+
+2️⃣ **Component Styles (`styleUrls` or `styles` in @Component)**  
+   - Defined in component-specific `.css` or `.scss` files.
+   - Example (`example.component.css`):
+     ```css
+     h1 {
+       color: red;
+     }
+     ```
+   ✅ **Applies only to that component unless encapsulation is disabled.**
+
+3️⃣ **Global Styles (`styles.css` or `styles.scss`)**  
+   - Found in `src/styles.css`.
+   - Affects **the entire application** unless overridden.
+   - Example (`styles.css`):
+     ```css
+     h1 {
+       color: blue;
+     }
+     ```
+
+4️⃣ **External Styles (Bootstrap, Tailwind, etc.)**  
+   - Loaded from `angular.json` or imported in `styles.css`.
+   - Example (`angular.json`):
+     ```json
+     "styles": [
+       "node_modules/bootstrap/dist/css/bootstrap.min.css",
+       "src/styles.css"
+     ]
+     ```
+
+5️⃣ **Browser Default Styles (Lowest Priority)**  
+   - If no styles are applied, the browser uses **default font, color, and size**.
+   - Example:
+     ```html
+     <h1>Hello</h1>
+     ```
+
+---
+
+### **🎯 What Happens If the Same Property is Defined Everywhere?**
+
+#### **Example: Same Property Defined in Multiple Places**
+
+```html
+<h1 style="color: yellow;">Hello</h1> <!-- Inline Style -->
+```
+```css
+/* Component Styles (example.component.css) */
+h1 {
+  color: red;
+}
+```
+```css
+/* Global Styles (styles.css) */
+h1 {
+  color: blue;
+}
+```
+```css
+/* Bootstrap Default */
+h1 {
+  color: black;
+}
+```
+
+✅ **Final Applied Style:** **Yellow** (Inline styles take priority).
+
+---
+
+### **🚀 How to Override Angular Styles?**
+
+#### **1️⃣ `::ng-deep` (For Scoped Component Styles)**
+- Use `::ng-deep` to override styles inside a **component**.
+- Works only with `ViewEncapsulation.Emulated`.
+```css
+::ng-deep h1 {
+  color: green;
+}
+```
+
+#### **2️⃣ `!important` (Forcing a Style)**
+- If a style isn’t applying due to specificity, use `!important`.
+```css
+h1 {
+  color: purple !important;
+}
+```
+✅ Overrides even component styles.
+
+#### **3️⃣ Use More Specific Selectors**
+- More specific CSS selectors take priority.
+```css
+body h1 {
+  color: orange;
+}
+```
+✅ Has **higher specificity** than `h1 { color: red; }`.
+
+---
+
+### **🎯 Final Conclusion**
+
+🔹 **Inline styles (`style="..."`)** → **Highest priority**  
+🔹 **Component styles (`styleUrls`, `styles`)** → **Higher than global**  
+🔹 **Global styles (`styles.css`)** → **Lower than component styles**  
+🔹 **External styles (Bootstrap, Tailwind, etc.)** → **Lowest unless overridden**  
+🔹 **Browser default styles** → **Lowest priority**  
+
+---
+
+✅ **Use component styles for isolation.**  
+✅ **Use global styles for common UI design.**  
+✅ **Use inline styles only for quick testing.**  
+
+---
+
+📌 **Now you can just copy and paste this into Notepad!** 🚀
+

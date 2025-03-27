@@ -1,0 +1,14 @@
+<h1 class="mt-5 mb-2">Get And Set </h1>
+<h3>Watch here: {{name}}</h3>
+<h3>Your Value: {{displayname}}</h3>
+<input type="text" name="" id="" value="{{name}}"
+(input)="getName($event)" placeholder="Enter Anything" class="mb-2"><br>
+
+<button (click)="displayName()">Get Value</button>
+<button (click)="setName()">Set Value</button>
+<hr>
+
+<h3>Email: {{email}}</h3>
+<input type="email" #emailField value="{{email}}"> <!-- here id means templatereference -->
+<button (click)="getEmail(emailField.value)">Get Email</button>
+<button (click)="setEmail()">Set Email</button>
