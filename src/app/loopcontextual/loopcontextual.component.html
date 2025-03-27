@@ -1,0 +1,23 @@
+<h1>Loop Contextual Variable</h1>
+<p>Contextual Variables are :-</p>
+<ol type="1">
+    <li>$index means all index</li>
+    <li>$first means first element of the array or anything</li>
+    <li>$last means last element of the array or anything</li>
+</ol>
+
+@for (item of users; track item) {
+
+    <!-- @if($first || $last){
+        <h2 style="background-color: rgb(61, 0, 244); color: aliceblue;">this is our no.{{$index+1}} and name is {{item}}</h2>
+    } -->
+    <!-- @if($odd){
+        <h2 style="background-color: rgb(61, 0, 244); color: aliceblue;">this is our no.{{$index}} and name is {{item}}</h2>
+    }
+    @else{
+    <h2>this is our no.{{$index}} and name is {{item}}</h2>
+    } -->
+}
+@empty(){
+    <h1>No Records Found</h1>
+}

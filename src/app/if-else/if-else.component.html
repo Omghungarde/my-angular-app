@@ -1,0 +1,88 @@
+<h1>IF ELSE CONDITIONS</h1>
+
+<h3>Control Flow</h3>
+
+<button (click)="hide()">Hide Div</button>
+<button (click)="show()" style="margin-left: 40px;">Show Div</button>
+<button (click)="toggle()"style="margin-left: 40px;">{{display?'Hide Div':'Show Div'}}</button>
+
+@if(display){
+    <div class="mt-4" style="width: 200px;height: 200px; background-color: rgb(202, 246, 5);">
+        
+    </div>
+}
+<hr>
+
+<button (click)="toggleDiv()"style="margin-left: 40px;">{{ChangeDiv?'Green Div':'Violet Div'}}</button>
+
+@if(ChangeDiv){
+    <div class="mt-4" style="width: 200px;height: 200px; background-color: rgb(151, 7, 241);">
+
+    </div>
+}
+@else{
+    <div class="mt-4" style="width: 200px;height: 200px; background-color: rgb(97, 241, 7)">
+
+    </div>
+}
+
+<hr>
+
+<h1>Else IF Condition</h1>
+
+<h3>Control Flow For Else if</h3>
+<button (click)="handleColor(1)">Blue</button>
+<button (click)="handleColor(2)">Red</button>
+<button (click)="handleColor(3)">Orange</button>
+<button (click)="handleColor(54645)">Black</button>
+<input type="number"(input)="handleInput($event)">
+@if(color==1){
+    <div class="mt-4" style="width: 200px;height: 200px; background-color: rgb(0, 59, 127);">
+
+    </div>
+}
+@else if (color==2) {
+    <div class="mt-4" style="width: 200px;height: 200px; background-color: rgb(216, 5, 5);">
+
+    </div>
+}
+@else if(color==3){
+    <div class="mt-4" style="width: 200px;height: 200px; background-color: rgb(249, 96, 0);">
+
+    </div>
+}
+@else{
+    <div class="mt-4" style="width: 200px;height: 200px; background-color: rgb(0, 0, 0)">
+
+    </div>
+}
+
+<hr>
+
+<h1>SWITCH CASE</h1>
+<button (click)="handleswitchColor('Red')" style="margin-left: 30px; margin-bottom: 30px;">Red</button>
+<button (click)="handleswitchColor('Green')" style="margin-left: 30px; margin-bottom: 30px;">Green</button>
+<button (click)="handleswitchColor('Blue')" style="margin-left: 30px; margin-bottom: 30px;">Blue</button>
+<button (click)="handleswitchColor('Yellow')" style="margin-left: 30px; margin-bottom: 30px;">Yellow</button>
+<button (click)="handleswitchColor('Orange')" style="margin-left: 30px; margin-bottom: 30px;">Orange</button>
+<input type="text" (input)="handleSwitchInput($event)" style="margin-left: 30px; margin-bottom: 30px;">
+@switch(colorswitch){
+    @case('Red'){
+        <h1 style="background-color: Red;">Red</h1>
+    }
+    @case('Green'){
+        <h1 style="background-color: Green;">Green</h1>
+    }
+    @case('Blue'){
+        <h1 style="background-color: rgb(8, 74, 255);">Blue</h1>
+    }
+    @case('Yellow'){
+        <h1 style="background-color: rgb(237, 237, 30);">Yellow</h1>
+    }
+    @case('Orange'){
+        <h1 style="background-color: rgb(208, 135, 0);">Orange</h1>
+    }
+    @default {
+        <h1 style="background-color: rgb(0, 0, 0); color: #ffffff;">No Color Match</h1>
+    }
+}

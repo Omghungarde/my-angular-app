@@ -9,10 +9,15 @@ import { CounterComponent } from './counter/counter.component';
 import { log } from 'console';
 import { EventAngularComponent } from './event-angular/event-angular.component';
 import { GetsetComponent } from './getset/getset.component';
-
+import { IfElseComponent } from './if-else/if-else.component';
+import { PracticeMeComponent } from './practice-me/practice-me.component';
+import { LoopsComponent } from './loops/loops.component';
+import { SignalsAllComponent } from './signals-all/signals-all.component';
+import { LoopcontextualComponent } from "./loopcontextual/loopcontextual.component";
+import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component';
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, FormsModule, BindingComponent, RouterOutlet, Profilecomponent, CounterComponent, EventAngularComponent, GetsetComponent],
+  imports: [CommonModule, FormsModule, BindingComponent, RouterOutlet, Profilecomponent, CounterComponent, EventAngularComponent, GetsetComponent, IfElseComponent, PracticeMeComponent, LoopsComponent, SignalsAllComponent, LoopcontextualComponent,TwowaybindingComponent],
   //  
   // template: `
   // <h1>Angular 4 App</h1>

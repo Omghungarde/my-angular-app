@@ -1,0 +1,44 @@
+<h1>All signals Here</h1>
+
+<h3>Count = {{count()}}</h3>
+<h3>Vaiable x = {{x}}</h3>
+<button (click)="icrementCount()">Increment For Count</button>
+<button (click)="icrementVariable()">Increment For Variable</button>
+<h4>Check the console log</h4>
+
+
+<button (click)="updateValue('dec')">Decrement</button>
+<h3>{{counte()}}</h3>
+<button (click)="updateValue('inc')">Increment</button>
+
+<hr>
+
+<h1> Changing Data Type</h1>
+
+<h3>{{data()}}</h3>
+<button (click)="updateSignal()">Change Type</button>
+<h3>{{data1()}}</h3>
+<h3>{{count2()}}</h3>
+<hr> <!-- Here we use Update method but it only use for number(type)-->
+<h3>{{data3()}}</h3>
+<button (click)="updatethroughUpdate()">Change Type By update</button>
+
+<h1>Computed Function <span>Check Console</span></h1>
+<h3>{{z()}}</h3>
+<button (click)="computedFunction()">Computed</button>
+
+
+<h1>Without using Computed Function <span>Check Console</span></h1>
+<h3>{{z1}}</h3>
+<button (click)="WithoutcomputedFunction()">Not Computed</button>
+
+
+<!-- Something New -->
+
+<h3>{{ countNo()}}</h3>
+
+<button (click)="new()" style="margin-bottom: 20px;">Magic</button>
+
+@if(displayHeading){
+    <h1 style="background-color: rgb(254, 0, 102);">Only For 2 Second</h1>
+}

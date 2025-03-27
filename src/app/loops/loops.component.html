@@ -1,0 +1,12 @@
+<h1>All Loops</h1>
+
+@for (item of users; track item; let id=$index) {
+    <h2>{{id+1}} {{item}}</h2>
+}
+<hr>
+@for (student of students; track student.name;let id=$index) {
+    <h3>{{id+1}} {{student.name}} {{student.age}} {{student.email}}</h3>
+    <button (click)="getName(student.name)">Get Name</button>
+
+    <h3>Name = {{val}}</h3>
+}
